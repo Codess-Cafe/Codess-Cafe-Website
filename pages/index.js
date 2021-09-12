@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from './components/nav'
+import Mentors from './components/mentors'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
@@ -142,6 +143,7 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
+      <Mentors/>
     </div>
   )
 }

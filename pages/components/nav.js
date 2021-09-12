@@ -29,7 +29,7 @@ const myNav = (props) => {
               <NavLink href="/tracks">Tracks</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/mentors">Mentors</NavLink>
+              <NavLink href="/mentors" className="mentors">Mentors</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/testimonials">Testimonials</NavLink>
