@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel'
 const Heading=()=>{
     return (
-        <div>
+        <div className="heading">
             <Navbar location="contact"/>
             <div className="row">
                 <h1 id="heading">CONTACT US!</h1>
@@ -71,11 +71,17 @@ const Heading=()=>{
                }
                .row{
               
-                   margin-left:2%;
+                  
                    margin-top:100px;
-                   margin-right:2%;
+                   margin-left:5%;
                    text-align:center;
                    
+               }
+               @media(max-width:700px){
+                 .row{
+                   margin-left:10%;
+                 }
+                
                }
                h3{
                 font-family: 'Ubuntu', sans-serif;
@@ -85,6 +91,9 @@ const Heading=()=>{
                }
                p{
                 color:#0059b3;
+               }
+               .heading{
+                 text-align:center;
                }
             `}</style>
         </div>

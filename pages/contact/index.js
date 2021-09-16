@@ -14,6 +14,9 @@ const Contact=()=>{
         Made with ❤️ by Codess Cafe community.
       </footer>
             <style jsx>{`
+            div{
+              text-align:center;
+            }
             footer {
                 width: 100%;
                 height: 100px;
