@@ -40,7 +40,7 @@ const NavBar = (props) => {
               <NavLink href="/apply">Apply</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/contact">Contact Us</NavLink>
+              <NavLink href="/contact" className={router.pathname == "/contact" ? "active" : ""}>Contact Us</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
