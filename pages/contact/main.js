@@ -17,7 +17,7 @@ const Main=()=>{
            <ul className="ul">          
                       { icons.map(icon => {
                                 return( 
-                                <li>
+                                <li key={icon.id}>
                                   <a href={icon.link}>
                                     <span></span>
                                     <span></span>
@@ -41,7 +41,6 @@ const Main=()=>{
   
 </ul>
             <style>{`
-                @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
                 h1{
                     color:white;

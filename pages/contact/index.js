@@ -7,7 +7,7 @@ import Main from './main'
 
 const Contact=()=>{
     return (
-        <div>
+        <div  suppressHydrationWarning>
             <Heading/>
             <Main/>
             <footer>
