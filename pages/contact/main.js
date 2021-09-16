@@ -1,89 +1,44 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import {icons} from './icons'
 const Main=()=>{
+    
     return (
         <div className="body">
-        
-         
             <Image 
                     src="/undraw_Designer_girl_s028-removebg-preview.png"
                     height={350}
                     width={350}
                     alt="social-logo"
-                    className="dtop"
-                   
-                    
+                    className="dtop"                  
                 />
                 
-           <ul className="ul">
-  <li>
-    <a href="https://aarnavjindal.in/">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span><Image 
-                    src="/portfolio.png"
-                    height={50}
-                    width={50}
-                    alt="social-logo"
-                    className="side-img"
-                   
-                    
-                /></span>
-             
-    </a>
-    
-  </li>
-  <li>
-    <a href="mailto:%20saarnavjindal1000@gmail.com">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span>
-      <Image 
-                    src="/mail.png"
-                    height={50}
-                    width={50}
-                    alt="social-logo"
-                    className="side-img"
-                   
-                    
-                />
-      </span>
-    </a>
-  </li>
-  <li>
-    <a href="https://www.linkedin.com/company/codesscafe/">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span>
-      <Image 
-                    src="/1596972899890.png"
-                    height={50}
-                    width={50}
-                    alt="social-logo"
-                    className="side-img"
-                   
-                    
-                />
-      </span>
-    </a>
-  </li>
-  <li>
-    <a href="https://www.linkedin.com/in/aarnavjindal/">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span className="fa fa-linkedin"></span>
-    </a>
-  </li>
+           <ul className="ul">          
+                      { icons.map(icon => {
+                                return( 
+                                <li>
+                                  <a href={icon.link}>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span><Image 
+                                                  src={icon.img}
+                                                  height={50}
+                                                  width={50}
+                                                  alt="social-logo"
+                                                  className="side-img"
+                                                
+                                                  
+                                              /></span>
+                                          
+                                  </a>
+                                  
+                                </li>);
+                      })
+                    }
+  
 </ul>
             <style>{`
                 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');

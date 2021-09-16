@@ -5,6 +5,7 @@ import Navbar from '../../components/nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel'
 const Heading=()=>{
+   
     return (
         <div className="heading">
             <Navbar location="contact"/>
