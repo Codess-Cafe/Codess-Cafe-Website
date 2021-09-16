@@ -5,18 +5,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Main=()=>{
     return (
         <div className="body">
-            <p className="dtop">
+        
          
             <Image 
                     src="/undraw_Designer_girl_s028-removebg-preview.png"
                     height={350}
                     width={350}
                     alt="social-logo"
-                    className="side-img"
+                    className="dtop"
                    
                     
                 />
-                </p>
+                
            <ul className="ul">
   <li>
     <a href="https://aarnavjindal.in/">
@@ -92,9 +92,9 @@ const Main=()=>{
                     color:white;
                 }
                 .body {
-                  display: flex;
+                  display:flex;
                   align-items: center;
-                  justify-content: center;
+                  justify-content:center;
                   height: 300px;
                   background-color: #1E90FF;
                   margin:0;
@@ -202,8 +202,13 @@ const Main=()=>{
                 @media(max-width:700px){
                     .dtop{
                         display:none;
+                        visibility:hidden;
+                    }
+                    .body{
+                        display:inline-flex;
                     }
                 }
+                
             `}</style>
         </div>
     )
