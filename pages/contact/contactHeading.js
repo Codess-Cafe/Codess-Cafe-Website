@@ -72,7 +72,7 @@ const Heading=()=>{
                }
                .row{
               
-                  
+                animation:slide 3s;
                    margin-top:100px;
                    margin-left:5%;
                    text-align:center;
@@ -94,8 +94,12 @@ const Heading=()=>{
                 color:#0059b3;
                }
                .heading{
-                 text-align:center;
+               
                }
+               @keyframes slide {
+                0%   { transform: translate(0px,-500px); }
+                100% { transform: translate(0px,0px); }
+            }
             `}</style>
         </div>
     );
