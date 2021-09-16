@@ -8,7 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "bootstrap": "^5.1.1",
+
+ 
+
+    "bootstrap": "^5.1.0",
+    "bootstrap-select": "^1.13.18",
+
     "next": "^11.0.0",
     "react": "^17.0.2",
     "react-animated-css": "^1.2.1",

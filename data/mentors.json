@@ -1,0 +1,123 @@
+[
+        {
+            "category":"Competitive Programming",
+            "name":"Aarnav Jindal",
+            "image":"https://codess.cafe/images/mentor/14.jpg",
+            "position":"SDE",
+            "company":"Cure.Fit",
+            "education":"Founder, Codess.Cafe"
+        },
+        {
+            "category":"Open Source",
+            "name":"Aditi Aggrawal",
+            "image":"https://codess.cafe/images/mentor/8.jpg",
+            "position":"SDE intern",
+            "company":"Goldman Sachs",
+            "education":"IT, Delhi Technological University"
+        },
+        {
+            "category":"Technical Interview Preparation",
+            "name":"Aeshna Jain",
+            "image":"https://codess.cafe/images/mentor/6.jpg",
+            "position":"SDE intern",
+            "company":"Microsoft",
+            "education":"IT, Indira Gandi Delhi Technological University for Women"
+        },
+        {
+            "category":"Resume Reviews",
+            "name":"Aiman Siddiqua",
+            "image":"https://codess.cafe/images/mentor/0.jpg",
+            "position":"SDE Intern",
+            "company":"Amazon",
+            "education":"MCE, Delhi Technological University"
+        },
+        {
+            "category":"DSA Preparation",
+            "name":"Akanksha Tanwar",
+            "image":"https://codess.cafe/images/mentor/2.jpg",
+            "position":"SDE intern",
+            "company":"Microsoft",
+            "education":"IT, Delhi Technological University"
+        },
+        {
+            "category":"Competitive Programming",
+            "name":"Chitra Singla",
+            "image":"https://codess.cafe/images/mentor/1.jpg",
+            "position":"SDE intern",
+            "company":"Amazon",
+            "education":"CSE, Delhi Technological University"
+        },
+        {
+            "category":"Core subject Preparation",
+            "name":"Deepti Aggarwal",
+            "image":"https://codess.cafe/images/mentor/9.jpg",
+            "position":"SDE",
+            "company":"Microsoft",
+             "education":"CSE, Delhi Technological University"
+        },
+        {
+            "category":"Open source",
+            "name":"Joshika",
+            "image":"https://codess.cafe/images/mentor/4.jpg",
+            "position":"SDE",
+            "company":"Morgan Stanley",
+            "education":"CSE, Indian Institute Of Technology, Patna"
+        },
+        {
+            "category":"Open Source",
+            "name":"Kirti Dabas",
+            "image":"https://codess.cafe/images/mentor/10.jpg",
+            "position":"SDE Intern",
+            "company":"Google",
+            "education":"CSE, Delhi Technological University"
+        },
+        {
+            "category":"Technical-Interview Preparation",
+            "name":"Krati Garg",
+            "image":"https://codess.cafe/images/mentor/7.jpg",
+            "position":"SDE Intern",
+            "company":"Google",
+            "education":"CSE, Delhi Technological University"
+        },
+        {
+            "category":"Technical interview Preparation",
+            "name":"Ojasvi Tyagi",
+            "image":"https://codess.cafe/images/mentor/11.jpg",
+            "position":"SDE intern",
+            "company":"Uber",
+            "education":"CSE, Indira Gandhi Delhi Technological University for Women"
+        },
+        {
+            "category":"Open Source",
+            "name":"Prachi Singhal",
+            "image":"https://codess.cafe/images/mentor/3.jpg",
+            "position":"SDE intern",
+            "company":"VMWare",
+            "education":"CSE, Mody University"
+        },
+        {
+            "category":"Competitive programming",
+            "name":"Radhika Patwari",
+            "image":"https://codess.cafe/images/mentor/12.jpg",
+            "position":"SDE Intern",
+            "company":"Google",
+            "education":"CSE, Indian Institute Of technology, Khadagpur"
+        },
+        {
+            "category":"open source",
+            "name":"Sangeeta Mishra",
+            "image":"https://codess.cafe/images/mentor/13.jpg",
+            "position":"SDE Intern",
+            "company":"Google",
+            "education":"Chemical, Indian Institute Of Technology-BHU"
+
+        },
+        {
+            "category":"competitive programming",
+            "name":"Sanskriti Singhal",
+            "image":"https://codess.cafe/images/mentor/5.jpg",
+            "position":"SDE Intern",
+            "company":"Google",
+            "education":"SE, Delhi Technological University"
+        }
+    ]

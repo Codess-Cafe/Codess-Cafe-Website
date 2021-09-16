@@ -1,142 +1,48 @@
 
-import Head from 'next/head'
+import React, {useState, useEffect} from 'react';
 import Image from 'next/image'
 import Card from '../components/card'
 import Navbar from '../components/nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Mentor=()=> {
+    const mentors = require("../data/mentors.json");
+    const [category, setCategory] = useState("");
 
-    const mentors = [
-        {
-            category:"Competitive Programming",
-            name:"Aarnav Jindal",
-            image:"https://codess.cafe/images/mentor/14.jpg",
-            position:"SDE",
-            company:"Cure.Fit",
-            education:"Founder, Codess.Cafe"
-        },
-        {
-            category:"Open-source",
-            name:"Aditi Aggrawal",
-            image:"https://codess.cafe/images/mentor/8.jpg",
-            position:"SDE intern",
-            company:"Goldman Sachs",
-            education:"IT, Delhi Technological University"
-        },
-        {
-            category:"Technical Interview Preparation",
-            name:"Aeshna Jain",
-            image:"https://codess.cafe/images/mentor/6.jpg",
-            position:"SDE intern",
-            company:"Microsoft",
-            education:"IT, Indira Gandi Delhi Technological University for Women"
-        },
-        {
-            category:"Resume Reviews",
-            name:"Aiman Siddiqua",
-            image:"https://codess.cafe/images/mentor/0.jpg",
-            position:"SDE Intern",
-            company:"Amazon",
-            education:"MCE, Delhi Technological University"
-        },
-        {
-            category:"DSA Preparation",
-            name:"Akanksha Tanwar",
-            image:"https://codess.cafe/images/mentor/2.jpg",
-            position:"SDE intern",
-            company:"Microsoft",
-            education:"IT, Delhi Technological University"
-        },
-        {
-            category:"CP",
-            name:"Chitra Singla",
-            image:"https://codess.cafe/images/mentor/1.jpg",
-            position:"SDE intern",
-            company:"Amazon",
-            education:"CSE, Delhi Technological University"
-        },
-        {
-            category:"Core subject Preparation",
-            name:"Deepti Aggarwal",
-            image:"https://codess.cafe/images/mentor/9.jpg",
-            position:"SDE",
-            company:"Microsoft",
-             education:"CSE, Delhi Technological University"
-        },
-        {
-            category:"Open source",
-            name:"Joshika",
-            image:"https://codess.cafe/images/mentor/4.jpg",
-            position:"SDE",
-            company:"Morgan Stanley",
-            education:"CSE, Indian Institute Of Technology, Patna"
-        },
-        {
-            category:"Open-Source",
-            name:"Kirti Dabas",
-            image:"https://codess.cafe/images/mentor/10.jpg",
-            position:"SDE Intern",
-            company:"Google",
-            education:"CSE, Delhi Technological University"
-        },
-        {
-            category:"Technical-Interview Preparation",
-            name:"Krati Garg",
-            image:"https://codess.cafe/images/mentor/7.jpg",
-            position:"SDE Intern",
-            company:"Google",
-            education:"CSE, Delhi Technological University"
-        },
-        {
-            category:"Technical interview Preparation",
-            name:"Ojasvi Tyagi",
-            image:"https://codess.cafe/images/mentor/11.jpg",
-            position:"SDE intern",
-            company:"Uber",
-            education:"CSE, Indira Gandhi Delhi Technological University for Women"
-        },
-        {
-            category:"Open Source",
-            name:"Prachi Singhal",
-            image:"https://codess.cafe/images/mentor/3.jpg",
-            position:"SDE intern",
-            company:"VMWare",
-            education:"CSE, Mody University"
-        },
-        {
-            category:"Competitive programming",
-            name:"Radhika Patwari",
-            image:"https://codess.cafe/images/mentor/12.jpg",
-            position:"SDE Intern",
-            company:"Google",
-            education:"CSE, Indian Institute Of technology, Khadagpur"
-        },
-        {
-            category:"open_source",
-            name:"Sangeeta Mishra",
-            image:"https://codess.cafe/images/mentor/13.jpg",
-            position:"SDE Intern",
-            company:"Google",
-            education:"Chemical, Indian Institute Of Technology-BHU"
-
-        },
-        {
-            category:"competitive programming",
-            name:"Sanskriti Singhal",
-            image:"https://codess.cafe/images/mentor/5.jpg",
-            position:"SDE Intern",
-            company:"Google",
-            education:"SE, Delhi Technological University"
+    const handleCategoryChange = (event) => {
+        setCategory(event.target.value)
+    }
+    const filtered = mentors.filter(function(result){
+        if(category === ""){
+            return true;
+        }else{
+            return result.category.toLowerCase() === category.toLowerCase();
         }
-    ]
-return (
+        
+    })
 
+return (
     <div>
         <Navbar loc="mentors"/>
         <div className="main">
            <h1 className="text-center">Mentors</h1>
+           
+            
            <div id = "bb"></div>
+           <div className="filterDiv">
+                <select
+                    className="selectpicker"
+                    onChange={handleCategoryChange}
+                >
+                    <option value="">Select a category</option>
+                    <option value="Competitive Programming">Competitive Programming</option>
+                    <option value="Open source">Open-Source</option>
+                    <option value="Technical interview Preparation">Technical interview Preparation</option>
+                    <option value="Core subject Preparation">Core subject Preparation</option>
+                    <option value="DSA Preparation">DSA Preparation</option>
+                    <option value="Resume Reviews">Resume Reviews</option>
+                </select>
+            </div>
             <div className="top-img">
                 <Image 
                     src="/undraw_Dev_focus_re_6iwt.png"
@@ -150,14 +56,11 @@ return (
                 <div className="bounce2"></div>
                 <div className="bounce3"></div>
             </div>
+            
                 <div className="mentor-grid">
-                   
-                 
-                    { mentors.map(mentor => (
-                        <Card key={mentor.category} mentor={mentor}/>
-                    ))
-                    }
-                    
+                    {filtered.map(mentor=> (
+                        <Card key={mentor.name} mentor={mentor}/>
+                    ))}
                 </div>
         </div>
         <style jsx>{`
@@ -269,6 +172,20 @@ return (
                     animation: slide 3s;
                 }
               }
+              .filterDiv{
+                text-align: right;
+                font-size: 1.2em;
+                margin-right: 2em;
+              }
+             .selectpicker{
+                padding: 5px;
+                border-radius: 3px;
+                border: none;
+                background-color: rgb(151 148 148 / 15%);
+             }
+             option:hover{
+                 background-color:red;
+             }
        `}</style>
     </div>
 )}
