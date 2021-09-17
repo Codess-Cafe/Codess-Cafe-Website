@@ -58,7 +58,7 @@ const Main=()=>{
                 .ul {
                   position: relative;
                   display: flex;
-                  transform: rotate(-25deg) skew(25deg);
+                 
                   transform-style: preserve-3d;
                 }
                 
