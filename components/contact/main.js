@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {icons} from './icons'
+import {icons} from '../../data/icons'
 const Main=()=>{
     
     return (

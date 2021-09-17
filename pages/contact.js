@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Heading from './contactHeading'
-import Main from './main'
+import Heading from '../components/contact/contactHeading'
+import Main from '../components/contact/main'
 
 
 const Contact=()=>{

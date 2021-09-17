@@ -1,7 +1,7 @@
 
 import Head from 'next/head'
 import Image from 'next/image'
-import Navbar from '../../components/nav'
+import Navbar from '../nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel'
 const Heading=()=>{
