@@ -3,35 +3,93 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Carousel from 'react-bootstrap/Carousel'
+import React, { useState } from 'react';
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption
+} from 'reactstrap';
+
 import Main from './main'
 const Heading=()=>{
-   
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+  const items = [
+    {
+      src: 1,
+      content:`    <div className="tag" style="     
+      background-color:#66b3ff;
+      display:inline-block;
+      color:white;
+      padding:10px;
+      border-radius:10px;
+      margin-bottom:10px;">
+      <h3>Coddess.Cafe</h3>
+      </div>
+      <p style=" font-size:30px;
+      color:#004080;
+      font-weight:500;"><i>Pro-bono mentorship by Aarnav Jindal for collegiate women in tech, helping them unlock their true potential.</i></p>`
+    },
+    {
+      src: 2,
+      content:` 
+      <div style="height:250px; padding-top:100px">
+      <h1 style="color:#0066cc;">Know More About us!</h1>
+      <h1 style="color:#0066cc;">Get in touch</h1>
+      </div>
+      `
+    }
+  ];
+  
+
+  const next = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);
+  }
+
+  const previous = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    setActiveIndex(nextIndex);
+  }
+
+  const goToIndex = (newIndex) => {
+    if (animating) return;
+    setActiveIndex(newIndex);
+  }
+
+  const slides = items.map((item) => {
+    return (
+      <CarouselItem
+        onExiting={() => setAnimating(true)}
+        onExited={() => setAnimating(false)}
+        key={item.src}
+      >
+       <div dangerouslySetInnerHTML={{ __html: item.content }} />
+      
+      </CarouselItem>
+    );
+  });
+
     return (
       <div className="header">
         <Navbar/>
         <h1 id="heading">CONTACT US!</h1>
             <div className="section">
-            <Carousel>
-              <Carousel.Item>
-              
-                <div className="tag">
-                <h3>Coddess.Cafe</h3>
-                </div>
-                      <p><i>Pro-bono mentorship by Aarnav Jindal for collegiate women in tech, helping them unlock their true potential.</i></p>
-                  
-                
-               
-              </Carousel.Item>
-              <Carousel.Item>
-                
-              <div className="bottom"></div>
-                  <h1>Know More About us!</h1>
-                  <h1>Get in touch</h1>
-                  <div className="bottom"></div>
-               
-              </Carousel.Item>
-        </Carousel>
+             <Carousel
+      activeIndex={activeIndex}
+      next={next}
+      previous={previous}
+     
+    >
+      <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+      {slides}
+      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+    </Carousel>
         <div className="icons">
           <Main/>
         </div>
@@ -79,20 +137,11 @@ const Heading=()=>{
             padding-left:3%;
             padding-right:3%;
           }
-          h1{
-            color:#0066cc;
-          }
+         
           #heading{
             color:white;
           }
-          .tag{
-            background-color:#66b3ff;
-            display:inline-block;
-            color:white;
-            padding:10px;
-            border-radius:10px;
-            margin-bottom:10px;
-          }
+         
           p{
             font-size:30px;
             color:#004080;
