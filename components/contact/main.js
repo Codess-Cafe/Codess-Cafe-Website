@@ -6,14 +6,7 @@ const Main=()=>{
     
     return (
         <div className="body">
-            <Image 
-                    src="/undraw_Designer_girl_s028-removebg-preview.png"
-                    height={350}
-                    width={350}
-                    alt="social-logo"
-                    className="dtop"                  
-                />
-                
+            
            <ul className="ul">          
                       { icons.map(icon => {
                                 return( 
@@ -45,20 +38,14 @@ const Main=()=>{
                 h1{
                     color:white;
                 }
-                .body {
-                  display:flex;
-                  align-items: center;
-                  justify-content:center;
-                  height: 300px;
-                  background-color: #1E90FF;
-                  margin:0;
-                  padding:0;
-                }
+      
                 
                 .ul {
-                  position: relative;
-                  display: flex;
                  
+                  display: grid;
+                  grid-template-columns: 10% 10%;
+                    grid-gap: 50% 100px;
+                    animation: slide 3s;
                   transform-style: preserve-3d;
                 }
                 
@@ -95,7 +82,7 @@ const Main=()=>{
                 .ul li span {
                   position: absolute;
                   top: 0;
-                  left: 0;
+              
                   width: 100%;
                   height: 100%;
                   display: flex !important;
@@ -153,15 +140,7 @@ const Main=()=>{
                 .ul li:nth-child(4):hover span {
                   background: #fceb00;
                 }
-                @media(max-width:700px){
-                    .dtop{
-                        display:none;
-                        visibility:hidden;
-                    }
-                    .body{
-                        display:inline-flex;
-                    }
-                }
+             
                 
             `}</style>
         </div>

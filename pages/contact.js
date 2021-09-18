@@ -9,10 +9,8 @@ const Contact=()=>{
     return (
         <div>
             <Heading/>
-            <Main/>
-            <footer>
-        Made with ❤️ by Codess Cafe community.
-      </footer>
+         
+            
             <style jsx>{`
             div{
               text-align:center;

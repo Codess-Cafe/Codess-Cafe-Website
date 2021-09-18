@@ -4,104 +4,171 @@ import Image from 'next/image'
 import Navbar from '../nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel'
+import Main from './main'
 const Heading=()=>{
    
     return (
-        <div className="heading">
-            <Navbar location="contact"/>
-            <div className="row">
-                <h1 id="heading">CONTACT US!</h1>
-            <div className="col-lg-4">
-            <Image 
-                    src="/undraw_social_tree_1_y9wa.png"
-                    height={600}
-                    width={500}
-                    alt="social-logo"
-                    className="side-img"
-                   
-                    
-                />
-                <h3>Coddess.Cafe</h3>
-                <p><i><b>Pro-bono mentorship by Aarnav Jindal for collegiate women in tech, helping them unlock their true potential.</b></i></p>
-            </div>
-            <div className="col-lg-8">
+      <div className="header">
+        <Navbar/>
+        <h1 id="heading">CONTACT US!</h1>
+            <div className="section">
             <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="/undraw_Social_networking_re_i1ex.png"
-            alt="Image One"
-           
-          />
-          <Carousel.Caption>
-            <h1>GET IN TOUCH</h1>
-           
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-        src="/undraw_Social_media_re_w12q.png"
-            alt="Image Two"
-          />
-          <Carousel.Caption>
-            <h1>Know More About us!</h1>
-           
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-      </div>
-      </div>
-            <style jsx>{`
-            @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-            .carousel-control-next-icon {
-                background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e);
-                color:#1E90FF;
-            }
-            #heading{
-                color:black;
-            }
-            img{
-                opacity:0.7;
-            }
-               h1{
-                   color:#0059b3;
-                   font-size:50px;
-                   font-family: 'Ubuntu', sans-serif;
-                    font-weight: 800;
-               }
-               .row{
+              <Carousel.Item>
               
-                animation:slide 3s;
-                   margin-top:100px;
-                   margin-left:5%;
-                   text-align:center;
-                   
-               }
-               @media(max-width:700px){
-                 .row{
-                   margin-left:10%;
-                 }
+                <div className="tag">
+                <h3>Coddess.Cafe</h3>
+                </div>
+                      <p><i>Pro-bono mentorship by Aarnav Jindal for collegiate women in tech, helping them unlock their true potential.</i></p>
+                  
                 
-               }
-               h3{
-                font-family: 'Ubuntu', sans-serif;
-                font-size: 2.5rem;
-                font-style: italic;
-                color:#1E90FF;
-               }
-               p{
-                color:#0059b3;
-               }
-               .heading{
                
-               }
-               @keyframes slide {
-                0%   { transform: translate(0px,-500px); }
-                100% { transform: translate(0px,0px); }
-            }
-            `}</style>
+              </Carousel.Item>
+              <Carousel.Item>
+                
+              <div className="bottom"></div>
+                  <h1>Know More About us!</h1>
+                  <h1>Get in touch</h1>
+                  <div className="bottom"></div>
+               
+              </Carousel.Item>
+        </Carousel>
+        <div className="icons">
+          <Main/>
         </div>
+        </div>
+     
+      <footer>
+        Made with ❤️ by Codess Cafe community.
+      </footer>
+      <div className="bottom"></div>
+      
+      <style jsx>{`
+          .header{
+            width:100%;
+            height:400px;
+            background-color:#0077e6;
+            padding-left: 20%;
+            padding-right: 20%;
+            padding-top: 100px;
+          
+          }
+          .bottom{
+            height:55px;
+          }
+          .section{
+            background:-moz-radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(204, 230, 255, 1) 80%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(204, 230, 255, 1) 80%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(204, 230, 255, 1) 80%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(204, 230, 255, 1) 80%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(204, 230, 255, 1) 80%);
+            padding-top:10%;
+            background-color:white;
+            border: 2px solid #0073e6;
+            border-radius:25px;
+            margin-left:10%;
+            margin-right:10%;
+            height:600px;
+            padding-left:3%;
+            padding-right:3%;
+          }
+          h1{
+            color:#0066cc;
+          }
+          #heading{
+            color:white;
+          }
+          .tag{
+            background-color:#66b3ff;
+            display:inline-block;
+            color:white;
+            padding:10px;
+            border-radius:10px;
+            margin-bottom:10px;
+          }
+          p{
+            font-size:30px;
+            color:#004080;
+            font-weight:500;
+          }
+          .icons{
+            margin-left:30%;
+         
+          }
+          @media(max-width:1200px){
+            .header{
+              padding-left: 10%;
+              padding-right: 10%;
+             
+            
+            }
+            .bottom{
+              margin-bottom:10px;
+            }
+            .icons{
+              margin-left:20%;
+            }
+          }
+          @media(max-width:700px){
+            .header{
+              padding-left: 0px;
+              padding-right: 0px;
+            }
+            .section{
+              height:700px;
+            }
+            .icons{
+              margin-left:20%;
+            }
+            .bottom{
+              margin-bottom:40px;
+            }
+          }
+          @media(max-width:500px){
+            .header{
+              padding-left: 0px;
+              padding-right: 0px;
+            }
+            .section{
+              height:700px;
+            }
+            .icons{
+              margin-left:3%;
+            }
+            .bottom{
+              margin-bottom:90px;
+            }
+          }
+
+          @media(max-width:300px){
+            .header{
+              padding-left: 0px;
+              padding-right: 0px;
+            }
+            .section{
+              height:700px;
+              padding-left:0;
+            }
+            .icons{
+              margin-left:0;
+            }
+            .bottom{
+              margin-bottom:90px;
+            }
+          }
+       
+            `}</style>
+      </div>
+
+
+     
     );
 }
 export default Heading;
