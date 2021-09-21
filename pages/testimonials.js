@@ -9,9 +9,8 @@ const about = () => {
     <div>
     <Navbar/>
    <div className="main">
-     
-
    <h1 className="text-center">Testimonials</h1>
+   <div id = "blue_border"></div>
     <div id="testimonials">
 
       {
@@ -25,7 +24,18 @@ const about = () => {
       <style jsx>{`
       .main{
         margin-top:100px;
+        animation: slideIn 2s;
       }
+      @keyframes slideIn{
+        from{
+            opacity:0;
+            transform:rotateX(-90deg);
+        }
+        to{
+            opacity:1;
+            transfor:rotateX(0);
+        }
+    }
       #testimonials{
         padding: 50px;
         margin-bottom: 16%;
@@ -36,12 +46,17 @@ const about = () => {
         animation: slide-jsx-2046397175 3s;
       }
       .text-center{
-        font-size: 3.5rem;
-        font-family: serif;
-      }
-
-      
+        margin-bottom: 0px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 40px;
+      }  
     }
+    #blue_border {
+      border-bottom:7px solid #1E90FF;
+      width: 90px;
+      margin-left:47%;           
+  }
     @media(max-width:600px){
      
     #testimonials{
