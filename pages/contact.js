@@ -9,13 +9,16 @@ const Contact=()=>{
     return (
         <div>
             <Heading/>
-         
+            <footer>
+        Made with ❤️ by Codess Cafe community.
+      </footer>
             
             <style jsx>{`
             div{
               text-align:center;
             }
             footer {
+              background-color:white;
                 width: 100%;
                 height: 100px;
                 border-top: 1px solid #eaeaea;

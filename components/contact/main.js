@@ -11,11 +11,12 @@ const Main=()=>{
     return (
         <div className="links container-fluid ">
           <div className="row">
-          <div className="col-lg-6 intro">
+          <div className="col-lg-5 intro">
             <h2><span className="tag">Codess</span>.Cafe</h2>
             <p><i>Pro-bono mentorship by Aarnav Jindal for collegiate women in tech, helping them unlock their true potential.</i></p>
+            <hr/>
           </div>
-            <div className="col-lg-6 socials">
+            <div className="col-lg-7 socials">
             
               <ul className="social-media-list">
                 
@@ -27,7 +28,7 @@ const Main=()=>{
                         {(icon.id==1?<p>CONTACT</p >:(icon.id==3?<p>MEDIA</p>:""))}
                         </div>
                       <a href={icon.link} target="_blank" className="contact-icon" key={icon.id}>
-                      <div class="row">
+                      <div className="row">
                      
                      
                       
@@ -178,9 +179,13 @@ h2{
 .intro p{
   font-size:30px;
   color:#cce6ff;
+  
 }
 .intro{
   animation: slide 2s;
+}
+.intro hr{
+  display: none;
 }
 .socials{
   animation: slideleft 2s;
@@ -192,6 +197,11 @@ h2{
 @keyframes slideleft {
   0%   { transform: translate(300px,0px); }
   100% { transform: translate(0px,0px); }
+}
+@media(max-width:975px){
+  .intro hr{
+    display: block;
+  }
 }
 
                 

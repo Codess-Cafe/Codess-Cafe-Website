@@ -13,7 +13,7 @@ export const icons=[
     {
       id:2,
     link:"mailto:%20saarnavjindal1000@gmail.com",
-    text: "Connect over Email"
+    text: "Email"
   },
     {
         id:4,
