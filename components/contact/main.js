@@ -2,145 +2,198 @@ import Head from 'next/head'
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {icons} from '../../data/icons'
+import { FaLinkedinIn } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import { GoPerson } from "react-icons/go";
+
 const Main=()=>{
     
     return (
-        <div className="body">
+        <div className="links container-fluid ">
+          <div className="row">
+          <div className="col-lg-6 intro">
+            <h2><span className="tag">Codess</span>.Cafe</h2>
+            <p><i>Pro-bono mentorship by Aarnav Jindal for collegiate women in tech, helping them unlock their true potential.</i></p>
+          </div>
+            <div className="col-lg-6 socials">
             
-           <ul className="ul">          
-                      { icons.map(icon => {
-                                return( 
-                                <li key={icon.id}>
-                                  <a href={icon.link}>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span><Image 
-                                                  src={icon.img}
-                                                  height={50}
-                                                  width={50}
-                                                  alt="social-logo"
-                                                  className="side-img"
-                                                
-                                                  
-                                              /></span>
-                                          
-                                  </a>
-                                  
-                                </li>);
-                      })
-                    }
-  
-</ul>
-            <style>{`
+              <ul className="social-media-list">
+                
+                {
+                  icons.map((icon)=>{
+                    return (
+                      <div>
+                         <div className="top">
+                        {(icon.id==1?<p>CONTACT</p >:(icon.id==3?<p>MEDIA</p>:""))}
+                        </div>
+                      <a href={icon.link} target="_blank" className="contact-icon" key={icon.id}>
+                      <div class="row">
+                     
+                     
+                      
+                      <div className="col-xxl-6 icons">
+                      <li >
+                     
+                       
 
-                h1{
-                    color:white;
+                      {(icon.id==3 || icon.id==4?<FaLinkedinIn/>:(icon.id==2?<SiGmail/>:(icon.id==1?<GoPerson/>:"")))}
+                     
+                      
+                    </li>
+                    </div>
+                    <div className="col-xxl-6 desc">
+                     <p>{icon.text}</p>
+                     </div>
+                     </div>
+                     </a>
+                     </div>
+                    )
+                  })
                 }
-      
-                
-                .ul {
-                 
-                  display: grid;
-                  grid-template-columns: 10% 10%;
-                    grid-gap: 50% 100px;
-                    animation: slide 3s;
-                  transform-style: preserve-3d;
-                }
-                
-                .ul li {
-                  position: relative;
-                  list-style: none;
-                  width: 60px;
-                  height: 60px;
-                  margin: 0 20px;
-                }
-                
-                .ul li::before {
-                  content: '';
-                  position: absolute;
-                  bottom: -10px;
-                  left: -5px;
-                  width: 100%;
-                  height: 10px;
-                  background: #2a2a2a;
-                  transform: skewX(-41deg);
-                }
-                
-                .ul li::after {
-                  content: '';
-                  position: absolute;
-                  top: 5px;
-                  left: -9px;
-                  width: 9px;
-                  height: 100%;
-                  background: #2a2a2a;
-                  transform: skewY(-49deg);
-                }
-                
-                .ul li span {
-                  position: absolute;
-                  top: 0;
               
-                  width: 100%;
-                  height: 100%;
-                  display: flex !important;
-                  background: #2a2a2a;
-                  justify-content: center;
-                  align-items: center;
-                  color: #fff;
-                  font-size: 30px !important;
-                }
-                
-                .ul li:hover span {
-                  z-index: 1000;
-                  transition: .3s;
-                  color: #fff;
-                  box-shadow: -1px 1px 1px rgba(0, 0, 0, .5);
-                }
-                
-                .ul li:hover span:nth-child(5) {
-                  transform: translate(40px, -40px);
-                  opacity: 1;
-                }
-                
-                .ul li:hover span:nth-child(4) {
-                  transform: translate(30px, -30px);
-                  opacity: .8;
-                }
-                
-                .ul li:hover span:nth-child(3) {
-                  transform: translate(20px, -20px);
-                  opacity: .6;
-                }
-                
-                .ul li:hover span:nth-child(2) {
-                  transform: translate(10px, -10px);
-                  opacity: .4;
-                }
-                
-                .ul li:hover span:nth-child(1) {
-                  transform: translate(0, 0);
-                  opacity: .2;
-                }
-                
-                .ul li:nth-child(1):hover span {
-                  background: #52e19f;
-                }
-                
-                .ul li:nth-child(2):hover span {
-                  background: #2c3456;
-                }
-                
-                .ul li:nth-child(3):hover span {
-                  background: #ea6e96;
-                }
-                
-                .ul li:nth-child(4):hover span {
-                  background: #fceb00;
-                }
-             
+           
+              </ul>
+              
+            </div>
+           
+        </div>
+            <style>{`
+.links{
+  background-color:#1E90FF;
+  box-shadow: 0 50vh 0 50vh #1E90FF;
+  margin-bottom:3%;
+}
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display:grid;
+  grid-template-columns:auto auto;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 200px;
+  margin: 40px 20px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+a:link{
+  text-decoration:none;
+}
+.social-media-list li {
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+}
+.social-media-list li:after {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+}
+p{
+  margin-bottom:20px;
+  display:inline;
+  color:white;
+  font-weight:600;
+}
+.desc{
+  text-align:center;
+}
+.social{
+  margin-left:27%;
+}
+@media (max-width:990px){
+  .social{
+    margin-left:0%;
+  }
+}
+li:hover{
+  color:black;
+}
+a:visited{
+  color:white;
+}
+.top p{
+
+  font-size:40px;
+}
+@media(min-width:1400px){
+  .top p{
+    text-align:left;
+  }
+  .desc{
+    padding-top:40px;
+  }
+}
+.intro{
+  padding-top:10px;
+  color:white;
+}
+h2{
+  
+  font-size:60px;
+  margin-bottom:10%;
+}
+.intro p{
+  font-size:30px;
+  color:#cce6ff;
+}
+.intro{
+  animation: slide 2s;
+}
+.socials{
+  animation: slideleft 2s;
+}
+@keyframes slide {
+  0%   { transform: translate(-300px,0px); }
+  100% { transform: translate(0px,0px); }
+}
+@keyframes slideleft {
+  0%   { transform: translate(300px,0px); }
+  100% { transform: translate(0px,0px); }
+}
+
                 
             `}</style>
         </div>
