@@ -36,6 +36,9 @@ const Contact=()=>{
                 justify-content: center;
                 align-items: center;
               }
+              footer{
+                box-shadow: 0 50vh 0 50vh white;
+              }
             `}</style>
         </div>
     )

@@ -154,12 +154,24 @@ const Form=()=>{
             .contact-wrapper {
                 display: flex;
                 flex-direction: column-reverse;
+                margin-left:0px;   
                
               }
             .direct-contact-container, .form-wrapper {
               float: none;
               
             }  
+            .send-button {
+              width:100%;
+              padding:0;
+             }
+             .send-button span{
+                 width:100%;
+                 padding:0;
+                }
+                
+             
+          
           }
           
           @media screen and (max-width: 410px) {

@@ -22,16 +22,14 @@ const Main=()=>{
                 
                 {
                   icons.map((icon)=>{
+                    <div className="top text-center" style={{display:"block"}}>
+                    {(icon.id==1?<p>CONTACT</p >:(icon.id==2?<p>MEDIA</p>:""))}
+                    </div>
                     return (
                       <div>
-                         <div className="top">
-                        {(icon.id==1?<p>CONTACT</p >:(icon.id==3?<p>MEDIA</p>:""))}
-                        </div>
+                        
                       <a href={icon.link} target="_blank" className="contact-icon" key={icon.id}>
-                      <div className="row">
-                     
-                     
-                      
+                      <div className="row"> 
                       <div className="col-xxl-6 icons">
                       <li >
                      
@@ -203,6 +201,7 @@ h2{
     display: block;
   }
 }
+
 
                 
             `}</style>
