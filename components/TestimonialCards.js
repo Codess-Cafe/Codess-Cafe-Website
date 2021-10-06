@@ -65,7 +65,7 @@ function TestimonialCards({ data }) {
                     border: 1px solid #AFEEEE;
                     text-align: center;
                     margin-bottom:30px;
-                    width:23rem;
+                    width:21rem;
                     border-radius: 15px;
                     height: 350px;
                     padding: 2rem;
@@ -90,6 +90,19 @@ function TestimonialCards({ data }) {
                     padding: 2rem;
                     }
                 }
+               
+                  @media(max-width:800px){
+                    .testimonial-container {
+                        border: 1px solid #AFEEEE;
+                        text-align: center;
+                        margin-bottom: 30px;
+                        width: 19rem;
+                        border-radius: 15px;
+                        height: 350px;
+                        padding: 2rem;
+                      }
+                      
+                 }
         `}</style>
         </div>
 

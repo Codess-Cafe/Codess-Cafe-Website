@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Navbar from '../../components/nav'
+import Navbar from '../components/nav'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {

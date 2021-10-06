@@ -74,6 +74,15 @@ const about = () => {
     justify-content: center;
     }
   }
+    @media(max-width:800px){
+     
+   #testimonials{
+    grid-template-columns: 45% 45%;
+    grid-gap: 1% 11%;
+   }
+  
+}
+
   
     `
       }

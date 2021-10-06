@@ -25,10 +25,10 @@ const NavBar = (props) => {
               <NavLink href="/about">About</NavLink>
             </NavItem>
             <NavItem>
-              {/* <NavLink href="/tracks" className={router.pathname == "/tracks" ? "active" : ""}>Tracks</NavLink> */}
+              <NavLink href="/tracks" className={router.pathname == "/tracks" ? "active" : ""}>Tracks</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/mentors" className={props.loc=="mentors"?"active":""}>Mentors</NavLink>
+              <NavLink href="/mentors">Mentors</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/testimonials">Testimonials</NavLink>
